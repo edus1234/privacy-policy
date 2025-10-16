@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduAssist Pro キャンペーン利用規則</title>
+    <style>
+        /* リセットとベーススタイル */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', 'メイリオ', Meiryo, 'MS Pゴシック', sans-serif;
+            line-height: 1.8;
+            color: #2d3436;
+            background-color: #f8f9fa;
+        }
+
+        /* コンテナ */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ヘッダー */
+        header {
+            background: linear-gradient(135deg, #2d7a5e 0%, #3fa577 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+            box-shadow: 0 4px 20px rgba(45, 122, 94, 0.3);
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        header .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            letter-spacing: 3px;
+            opacity: 0.95;
+        }
+
+        /* メインコンテンツ */
+        main {
+            background-color: white;
+            margin: 40px auto;
+            padding: 50px 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        /* イントロセクション */
+        .intro {
+            background: linear-gradient(to right, #e8f5e9, #f1f8f4);
+            padding: 30px;
+            border-left: 6px solid #2d7a5e;
+            margin-bottom: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(45, 122, 94, 0.1);
+        }
+
+        .intro p {
+            font-size: 1.05rem;
+            line-height: 2;
+            color: #1e4d3c;
+        }
+
+        /* 条文セクション */
+        .term-section {
+            margin-bottom: 50px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e8f5e9;
+        }
+
+        .term-section:last-child {
+            border-bottom: none;
+        }
+
+        .term-title {
+            color: #2d7a5e;
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 5px solid #3fa577;
+            font-weight: bold;
+        }
+
+        .term-intro {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+            color: #2d3436;
+        }
+
+        .term-content {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: #2d3436;
+        }
+
+        /* リストスタイル */
+        .term-list {
+            list-style: none;
+            counter-reset: item;
+            padding-left: 0;
+        }
+
+        .term-list > li {
+            counter-increment: item;
+            margin-bottom: 20px;
+            padding-left: 40px;
+            position: relative;
+            font-size: 1.05rem;
+            line-height: 1.9;
+        }
+
+        .term-list > li::before {
+            content: counter(item) ".";
+            position: absolute;
+            left: 0;
+            color: #2d7a5e;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* サブリスト */
+        .sub-list {
+            list-style: none;
+            counter-reset: subitem;
+            padding-left: 0;
+            margin-top: 15px;
+        }
+
+        .sub-list li {
+            counter-increment: subitem;
+            margin-bottom: 10px;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .sub-list li::before {
+            content: counter(subitem) ".";
+            position: absolute;
+            left: 0;
+            color: #3fa577;
+            font-weight: 600;
+        }
+
+        /* 製品リスト */
+        .product-list, .limit-list {
+            list-style: none;
+            margin-top: 15px;
+            padding-left: 20px;
+        }
+
+        .product-list li, .limit-list li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .product-list li::before {
+            content: "●";
+            position: absolute;
+            left: 0;
+            color: #2d7a5e;
+            font-size: 1.2rem;
+        }
+
+        .limit-list li::before {
+            content: "▶";
+            position: absolute;
+            left: 0;
+            color: #3fa577;
+            font-size: 0.9rem;
+        }
+
+        /* ハイライト */
+        .highlight {
+            background: linear-gradient(transparent 60%, #c8e6c9 60%);
+            font-weight: 600;
+            color: #1e4d3c;
+            padding: 2px 4px;
+        }
+
+        strong {
+            color: #2d7a5e;
+            font-weight: bold;
+            background: linear-gradient(transparent 70%, #e8f5e9 70%);
+            padding: 2px 4px;
+        }
+
+        /* フッター */
+        footer {
+            background-color: #2d7a5e;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 40px;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        /* レスポンシブデザイン */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header .subtitle {
+                font-size: 1rem;
+                letter-spacing: 2px;
+            }
+
+            .container {
+                padding: 0 15px;
+            }
+
+            main {
+                margin: 20px 10px;
+                padding: 30px 0;
+            }
+
+            .intro {
+                padding: 20px;
+            }
+
+            .term-title {
+                font-size: 1.3rem;
+            }
+
+            .term-list > li {
+                padding-left: 30px;
+                font-size: 1rem;
+            }
+
+            .term-list > li::before {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header {
+                padding: 40px 0;
+            }
+
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            header .subtitle {
+                font-size: 0.9rem;
+                letter-spacing: 1px;
+            }
+
+            .term-title {
+                font-size: 1.2rem;
+                padding-left: 10px;
+            }
+
+            .term-list > li {
+                padding-left: 25px;
+                font-size: 0.95rem;
+            }
+
+            .intro p {
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>EduAssist Pro</h1>
+            <p class="subtitle">キャンペーン利用規則</p>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="intro">
+                <p>株式会社 EduSupport(以下「当社」)がキャンペーン期間中に提供する「EduAssist Pro」(以下「本サービス」)の利用条件を以下のとおり定めます。ユーザーは本規則をよくお読みいただき、ご同意のうえご利用ください。</p>
+            </section>
+
+            <article class="terms-article">
+                <section class="term-section">
+                    <h2 class="term-title">第1条(適用範囲)</h2>
+                    <ol class="term-list">
+                        <li>本規則は、キャンペーン期間中に「EduAssist Pro」をキャンペーン価格でご利用いただくすべてのユーザー(以下「ユーザー」)に適用されます。</li>
+                        <li>ユーザーが本サービスの利用を開始した時点で、本規則の全条項に同意したものとみなします。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第2条(キャンペーン期間)</h2>
+                    <ol class="term-list">
+                        <li>キャンペーン期間は <strong>2025年7月25日(開始日)～2025年9月12日(終了日)</strong> とします。</li>
+                        <li>期間の延長・短縮および詳細は当社ウェブサイト上で告知します。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第3条(サービス内容および料金)</h2>
+                    <ol class="term-list">
+                        <li>本サービス「EduAssist Pro」は、以下３製品のセットにして、キャンペーン価格で提供するサービスです
+                            <ul class="product-list">
+                                <li>手書き採点アシスタント</li>
+                                <li>プレゼンの友</li>
+                                <li>リスニングメーカー</li>
+                            </ul>
+                        </li>
+                        <li>上記３製品は、先生１アカウントに次の通り、月ごとの回数制限を定めます。この回数制限は毎月１日にリセットされます。
+                            <ul class="limit-list">
+                                <li>手書き採点アシスタント：<span class="highlight">500回の採点</span></li>
+                                <li>プレゼンの友：<span class="highlight">500回の採点</span></li>
+                                <li>リスニングメーカー：<span class="highlight">30回のリスニング音声ダウンロード</span></li>
+                            </ul>
+                        </li>
+                        <li>キャンペーン価格およびお支払い条件は、当社ウェブサイトおよびお申込み時のご案内に準じます。</li>
+                        <li>キャンペーン期間内にご契約いただいた教育機関は、契約を解除しない限り、その期間を終了してもキャンペーン価格でご利用いただけます。</li>
+                        <li>１つの教育機関での最低利用人数は１名とし、年度(4月～翌年3月)途中での人数の変更はできません。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第4条(契約成立および契約解除)</h2>
+                    <ol class="term-list">
+                        <li>本サービス利用には、当社所定の申込フォームからお申し込みのうえ、請求書記載の期日までに代金をご入金いただく必要があります。</li>
+                        <li>当社が入金を確認した時点で契約が成立し、利用登録が完了します。</li>
+                        <li>登録情報に虚偽があると当社が判断した場合、利用承認を取り消すことがあります。</li>
+                        <li>本サービスの契約の解除を希望する場合は、解約希望日の１週間前までに株式会社 EduSupport ホームページ内の「お問い合わせ」からその旨を連絡しなければなりません。</li>
+                        <li>本サービスの最低利用期間は、契約日～2026年3月31日までとします。その途中で契約を解除した場合は、期間内の利用料金をお支払いいただきます。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第5条(利用条件および遵守事項)</h2>
+                    <ol class="term-list">
+                        <li>ユーザーは以下を遵守するものとします。
+                            <ol class="sub-list">
+                                <li>アカウントの第三者譲渡・共有の禁止</li>
+                                <li>本サービスの目的外利用の禁止</li>
+                                <li>当社または第三者の権利侵害の禁止</li>
+                            </ol>
+                        </li>
+                        <li>本サービス利用に関連して生じたユーザーと生徒等とのトラブルは、ユーザーの責任で解決するものとし、当社は一切関与しません。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第6条(提出データの取扱い)</h2>
+                    <ol class="term-list">
+                        <li>ユーザーまたは生徒が提出したデータ(答案画像、音声ファイル等)は、当社の品質向上および研究開発のために利用させていただきます。</li>
+                        <li>第三者へ提供する場合は、個人が特定されない形で行います。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第7条(提供停止・キャンペーン中断・終了)</h2>
+                    <ol class="term-list">
+                        <li>当社は以下の場合、事前通知なく本サービスの提供停止またはキャンペーンの中断・終了を行うことがあります。
+                            <ol class="sub-list">
+                                <li>サービス保守・アップデート時</li>
+                                <li>天災その他不可抗力による場合</li>
+                                <li>本規則違反があった場合</li>
+                            </ol>
+                        </li>
+                        <li>提供停止・中断・終了に伴う返金等には応じかねます。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第8条(禁止事項)</h2>
+                    <p class="term-intro">ユーザーは本サービス利用に際し、以下の行為をしてはなりません。</p>
+                    <ol class="term-list">
+                        <li>他者のアカウント情報不正取得・共有</li>
+                        <li>虚偽情報の登録</li>
+                        <li>本サービス運営を妨げる行為</li>
+                        <li>法令または公序良俗に反する行為</li>
+                        <li>その他当社が不適切と判断する行為</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第9条(免責事項)</h2>
+                    <ol class="term-list">
+                        <li>当社はAI評価結果の完全な正確性を保証しません。</li>
+                        <li>本サービス利用に起因してユーザーまたは第三者に生じた損害について、当社は当社の重過失を除き、一切責任を負いません。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第10条(規則の変更)</h2>
+                    <ol class="term-list">
+                        <li>当社は必要と判断した場合、本規則をユーザーの同意なく変更できるものとします。</li>
+                        <li>変更後の規則は当社ウェブサイト掲載時から効力を有します。</li>
+                    </ol>
+                </section>
+
+                <section class="term-section">
+                    <h2 class="term-title">第11条(準拠法・裁判管轄)</h2>
+                    <p class="term-content">本規則は日本法に準拠し、本サービスに関する紛争については、東京地方裁判所を第一審専属管轄とします。</p>
+                </section>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 株式会社 EduSupport. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
